@@ -1,13 +1,13 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "This is a sample server celler server.",
-        "title": "Swagger Example API",
+        "description": "Ejemplo uso Chi Go para pruebas de concepto",
+        "title": "Ejemplo Web 001",
         "termsOfService": "http://swagger.io/terms/",
         "contact": {
-            "name": "API Support",
-            "url": "http://www.swagger.io/support",
-            "email": "support@swagger.io"
+            "name": "Zeke",
+            "url": "http://www.zeke.cl",
+            "email": "correomandos@zeke.cl"
         },
         "license": {
             "name": "Apache 2.0",
