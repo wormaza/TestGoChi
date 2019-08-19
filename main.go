@@ -13,7 +13,7 @@ import (
 
 // @title Ejemplo GO Chi
 // @version 1.0
-// @description Construir ejemplo en base a Chi
+// @description Construir ejemplo en base a Chi (Pruebas de concepto)
 // @termsOfService http://swagger.io/terms/
 
 // @contact.name Zeke
