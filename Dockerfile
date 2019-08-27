@@ -1,17 +1,13 @@
-FROM golang:1.12.8-alpine3.10
-LABEL maintainer="wormazabal <www.zeke.cl>"
+#reference: https://cloud.docker.com/repository/registry-1.docker.io/wormaza/go-chi-swagger
+FROM wormaza/go-chi-swagger:dev-1.0
+LABEL maintainer="wormaza"
 LABEL version="1.0"
-LABEL project="Web-GO-Backend-Test"
+LABEL project="Web-GO-Chi-Backend-Test"
 LABEL description="Imagen Docker para pruebas Go"
 RUN mkdir /app
 ADD . /app
 WORKDIR /app
-EXPOSE 3000/tcp
-RUN apk add curl git vim wget
-RUN go get -u github.com/go-chi/chi
-RUN go get -u github.com/swaggo/swag/cmd/swag
-RUN go get -u github.com/swaggo/http-swagger
-RUN go get -u github.com/alecthomas/template
-RUN go get -u github.com/go-chi/cors
+COPY /SSL /app/ssl
+EXPOSE 443/tcp
 RUN go build -o main .
 CMD ["/app/main"]

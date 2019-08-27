@@ -58,6 +58,10 @@ func main() {
 		http.Redirect(w, r, "/swagger/", http.StatusMovedPermanently)
 	})
 
-	log.Fatal(http.ListenAndServe(":3000", r))
+	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
+		http.Redirect(w, r, "/swagger/", http.StatusMovedPermanently)
+	})
 
+	//log.Fatal(http.ListenAndServe(":3000", r))
+	log.Fatal(http.ListenAndServeTLS(":443", "./ssl/https-example-server.crt", "./ssl/https-example-server.key", r))
 }
